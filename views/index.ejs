@@ -1,0 +1,83 @@
+<main role="main">
+
+  <div class="bg-container">
+    <img src="/img/background.jpeg"
+      alt="">
+  </div>
+  <div class="card container-timer">
+    <div class="card-body">
+      <div class="d-flex flex-column">
+        <p id="timerText"
+          class="card-text text-center">
+        </p>
+        <div class="d-flex justify-content-center btns-container-flex">
+          <button id="btnEdit"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#mdEdit">Editar</button>
+          <button id="btnStart"
+            class="btn btn-success">Iniciar</button>
+          <button id="btnStop"
+            class="btn btn-danger">Parar</button>
+          <button id="btnClean"
+            class="btn btn-warning">Limpiar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade"
+  id="mdEdit"
+  tabindex="-1"
+  aria-labelledby="mdEditLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="mdEditLabel">Editar temporizador</h5>
+        <button type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formEdit">
+          <div class="mb-3">
+            <label for="inputMinutes"
+              class="form-label">Minutos</label>
+            <input type="number"
+              name="minutes"
+              class="form-control"
+              id="inputMinutes"
+              min="0"
+              max="30">
+          </div>
+          <div class="mb-3">
+            <label for="inputSeconds"
+              class="form-label">Segundos</label>
+            <input type="number"
+              name="seconds"
+              class="form-control"
+              id="inputSeconds"
+              min="0"
+              max="59">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+          id="btnCloseMdEdit"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal">Cerrar</button>
+        <button type="button"
+          class="btn btn-primary"
+          id="btnSave">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
